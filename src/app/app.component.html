@@ -4,4 +4,9 @@
     Apollo-Angular-Boost</a
   >
 </h1>
+<ul>
+<li *ngFor="let graphResponse of graphResponse |  async">
+    {graphResponse.counts} {graphResponse.orders}
+</li>
+</ul>
 <router-outlet></router-outlet>

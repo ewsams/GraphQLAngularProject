@@ -1,4 +1,4 @@
-import { Component} from "@angular/core";
+import { Component } from "@angular/core";
 import { Apollo } from "apollo-angular";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -12,7 +12,7 @@ import { sampleQuery } from "./queries/GraphQueries";
 export class AppComponent {
   /* Probably a good idea to 
   move this stuff to the services file. */
-  
+
   graphResponse: Observable<any>;
 
   constructor(private apollo: Apollo) {}
@@ -22,7 +22,11 @@ export class AppComponent {
       .watchQuery({
         query: sampleQuery,
       })
-      .valueChanges.pipe(map((result: any) => result.data));
-    console.log(this.graphResponse);
+      .valueChanges.pipe(
+        map((result: any) => {
+          console.log(result.data);
+          return result.data;
+        })
+      );
   }
 }
