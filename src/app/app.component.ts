@@ -24,8 +24,8 @@ export class AppComponent {
       })
       .valueChanges.pipe(
         map((result: any) => {
-          console.log(result.data);
-          return result.data;
+          console.log(result.data.counts);
+          return result.data.counts;
         })
       );
   }
