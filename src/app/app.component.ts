@@ -1,4 +1,4 @@
-import { Component,OnInit } from "@angular/core";
+import { Component} from "@angular/core";
 import { Apollo } from "apollo-angular";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -10,6 +10,9 @@ import { sampleQuery } from "./queries/GraphQueries";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
+  /* Probably a good idea to 
+  move this stuff to the services file. */
+  
   graphResponse: Observable<any>;
 
   constructor(private apollo: Apollo) {}
