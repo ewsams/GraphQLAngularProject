@@ -1,10 +1,10 @@
-<h1 class="boldSales pageTitle left50px">
+<h1 class="boldSales pageTitle left30px">
   Using:
   <a href="https://www.npmjs.com/package/apollo-angular-boost">
     Apollo-Angular-Boost</a
   >
 </h1>
-<h3 class="boldSales pageTitle left50px">
+<h3 class="boldSales pageTitle left30px">
   please donate help us build a better experience :
 </h3>
 <h2>
@@ -13,23 +13,23 @@
   </b>
 </h2>
 <div *ngIf="loading">
-  <strong class="boldSales pageTitle left50px">Currently Loading...</strong
+  <strong class="boldSales pageTitle left30px">Currently Loading...</strong
   ><br />
-  <strong class="boldSales pageTitle left50px"
+  <strong class="boldSales pageTitle left30px"
     >Querying:
     https://api.thegraph.com/subgraphs/name/decentraland/marketplace...</strong
   >
 </div>
 <div *ngIf="!loading">
-  <h2 class="boldSales pageTitle left50px">Counts Properties</h2>
+  <h2 class="boldSales pageTitle left30px">Counts Properties</h2>
   <ul
     *ngFor="let response of graphResponse.counts"
-    class="list-group boldSales left50px"
+    class="list-group boldSales left30px"
   >
-    <li class="left50px">OrderEstate: {{ response.orderEstate }}</li>
-    <li class="left50px">OrderParcel: {{ response.orderParcel }}</li>
+    <li class="left30px">OrderEstate: {{ response.orderEstate }}</li>
+    <li class="left30px">OrderParcel: {{ response.orderParcel }}</li>
   </ul>
-  <h2 class="boldSales pageTitle left50px">Orders Properties</h2>
+  <h2 class="boldSales pageTitle left30px">Orders Properties</h2>
   <ul
     *ngFor="let response of graphResponse.orders"
     class="list-group boldSales left10px"
