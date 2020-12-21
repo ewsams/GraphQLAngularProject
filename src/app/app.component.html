@@ -1,44 +1,52 @@
-<h1 class="boldSales pageTitle left30px">
-  Using:
-  <a href="https://www.npmjs.com/package/apollo-angular-boost">
-    Apollo-Angular-Boost</a
-  >
-</h1>
-<h3 class="boldSales pageTitle left30px">
-  please donate help us build a better experience :
-</h3>
-<h2>
-  <b class="walletAddress">
-    0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86
-  </b>
-</h2>
-<div *ngIf="loading">
-  <strong class="boldSales pageTitle left30px">Currently Loading...</strong
-  ><br />
-  <strong class="boldSales pageTitle left30px"
-    >Querying:
-    https://api.thegraph.com/subgraphs/name/decentraland/marketplace...</strong
-  >
-</div>
-<div *ngIf="!loading">
-  <h2 class="boldSales pageTitle left30px">Counts Properties</h2>
-  <ul
-    *ngFor="let response of graphResponse.counts"
-    class="list-group boldSales left30px"
-  >
-    <li class="left30px">OrderEstate: {{ response.orderEstate }}</li>
-    <li class="left30px">OrderParcel: {{ response.orderParcel }}</li>
-  </ul>
-  <h2 class="boldSales pageTitle left30px">Orders Properties</h2>
-  <ul
-    *ngFor="let response of graphResponse.orders"
-    class="list-group boldSales left10px"
-  >
-    <li class="list-group-item active">
-      Type of SALE: {{ response.category }}
-    </li>
-    <li class="list-group-item">ID: {{ response.id }}</li>
-    <li class="list-group-item">ADDRESS: {{ response.nftAddress }}</li>
-  </ul>
+<!-- Using the cointainer Class -->
+<div class="container-fluid">
+  <h1 class="boldSales pageTitle">
+    Using:
+    <a href="https://www.npmjs.com/package/apollo-angular-boost">
+      Apollo-Angular-Boost</a
+    >
+  </h1>
+  <h3 class="boldSales pageTitle">
+    please donate help us build a better experience :
+  </h3>
+  <h4>
+    <a href="https://etherscan.io/address/0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86">
+    <b class="walletAddress"> 0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86 </b>
+  </a>
+  </h4>
+  <div *ngIf="loading">
+    <strong class="boldSales pageTitle">Currently Loading...</strong><br />
+    <strong class="boldSales pageTitle"
+      >Querying:
+      https://api.thegraph.com/subgraphs/name/decentraland/marketplace...</strong
+    >
+  </div>
+  <div *ngIf="!loading">
+    <h2 class="boldSales pageTitle">Counts Properties</h2>
+    <ul
+      *ngFor="let response of graphResponse.counts"
+      class="list-group boldSales"
+    >
+      <li class="boldSales pageTitle">
+        OrderEstate: {{ response.orderEstate }}
+      </li>
+      <li class="boldSales pageTitle">
+        OrderParcel: {{ response.orderParcel }}
+      </li>
+    </ul>
+    <h2 class="boldSales pageTitle">Orders Properties</h2>
+    <ul
+      *ngFor="let response of graphResponse.orders"
+      class="list-group boldSales"
+    >
+      <li class="list-group-item active">
+        Type of SALE: {{ response.category }}
+      </li>
+      <li class="list-group-item text-success">ID: {{ response.id }}</li>
+      <li class="list-group-item text-success">
+        ADDRESS: {{ response.nftAddress }}
+      </li>
+    </ul>
+  </div>
 </div>
 <router-outlet></router-outlet>
