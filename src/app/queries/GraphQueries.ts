@@ -3,21 +3,21 @@ import { gql } from "apollo-angular-boost";
 for constructing Queries
 */
 
-export const sampleQuery =  gql`
-{
-  counts(first: 5) {
-    id
-    orderTotal
-    orderParcel
-    orderEstate
-  }
-  orders(first: 5) {
-    id
-    category
-    nft {
+export const sampleQuery = gql`
+  {
+    counts(first: 5) {
       id
+      orderTotal
+      orderParcel
+      orderEstate
     }
-    nftAddress
+    orders(first: 5) {
+      id
+      category
+      nft {
+        id
+      }
+      nftAddress
+    }
   }
-}
-`
+`;
