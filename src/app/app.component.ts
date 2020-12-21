@@ -13,24 +13,22 @@ export class AppComponent {
   /* Probably a good idea to 
   move this stuff to the services file. */
 
-  graphResponse: Observable<any>;
+  graphResponse: {};
 
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
-    this.graphResponse = this.apollo
+      this.apollo
       .watchQuery({
         query: sampleQuery,
       })
-      .valueChanges.pipe(
-        map((result: any) => {
-          const responseObject = {
-            counts: result.data.counts,
-            orders: result.data.orders,
-          };
-          console.log(responseObject);
-          return responseObject.counts;
-        })
-      );
+      .valueChanges.subscribe((result: any) => {
+        const responseObject = {
+          counts: result.data.counts,
+          orders: result.data.orders,
+        };
+        console.log(responseObject);
+       this.graphResponse = responseObject;
+      });
   }
 }
