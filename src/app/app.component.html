@@ -22,10 +22,10 @@
     <li>OrderParcel: {{ response.orderParcel }}</li>
   </ul>
   <h2>Orders Properties</h2>
-  <ul *ngFor="let response of graphResponse.orders">
-    <li>Category: {{ response.category }}</li>
-    <li>ID: {{ response.id }}</li>
-    <li>NFT: {{ response.nftAddress }}</li>
+  <ul *ngFor="let response of graphResponse.orders" class="list-group">
+    <li class="list-group-item active">Category: {{ response.category }}</li>
+    <li class="list-group-item">ID: {{ response.id }}</li>
+    <li class="list-group-item">NFT: {{ response.nftAddress }}</li>
   </ul>
 </div>
 <router-outlet></router-outlet>

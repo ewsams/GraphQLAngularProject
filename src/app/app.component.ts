@@ -11,6 +11,7 @@ export class AppComponent {
   /* Probably a good idea to 
   move this stuff to the services file. */
 
+  // building our App on Objects
   graphResponse = {};
   loading: boolean = true;
 
