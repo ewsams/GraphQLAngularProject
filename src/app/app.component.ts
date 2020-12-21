@@ -24,8 +24,12 @@ export class AppComponent {
       })
       .valueChanges.pipe(
         map((result: any) => {
-          console.log(result.data.counts);
-          return result.data.counts;
+          const responseObject = {
+            counts: result.data.counts,
+            orders: result.data.orders,
+          };
+          console.log(responseObject);
+          return responseObject.counts;
         })
       );
   }

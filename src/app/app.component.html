@@ -4,8 +4,8 @@
     Apollo-Angular-Boost</a
   >
 </h1>
-<ul *ngFor="let graphResponse of graphResponse | async">
-  <li>orderEstate: {{ graphResponse.orderEstate }}</li>
-  <li>orderParcel: {{ graphResponse.orderParcel }}</li>
+<ul *ngFor="let response of graphResponse | async">
+  <li>orderEstate: {{ response.orderEstate }}</li>
+  <li>orderParcel: {{ response.orderParcel }}</li>
 </ul>
 <router-outlet></router-outlet>
