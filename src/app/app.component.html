@@ -10,9 +10,11 @@
     please donate help us build a better experience :
   </h3>
   <h4>
-    <a href="https://etherscan.io/address/0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86">
-    <b class="walletAddress"> 0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86 </b>
-  </a>
+    <a
+      href="https://etherscan.io/address/0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86"
+    >
+      <b class="walletAddress"> 0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86 </b>
+    </a>
   </h4>
   <div *ngIf="loading">
     <strong class="boldSales pageTitle">Currently Loading...</strong><br />
@@ -27,10 +29,10 @@
       *ngFor="let response of graphResponse.counts"
       class="list-group boldSales"
     >
-      <li class="boldSales pageTitle">
+      <li class="boldSales pageTitle text-success">
         OrderEstate: {{ response.orderEstate }}
       </li>
-      <li class="boldSales pageTitle">
+      <li class="boldSales pageTitle text-success">
         OrderParcel: {{ response.orderParcel }}
       </li>
     </ul>
@@ -42,9 +44,12 @@
       <li class="list-group-item active">
         Type of SALE: {{ response.category }}
       </li>
-      <li class="list-group-item text-success">ID: {{ response.id }}</li>
-      <li class="list-group-item text-success">
-        ADDRESS: {{ response.nftAddress }}
+      <li class="list-group-item">ID: {{ response.id }}</li>
+      <li class="list-group-item">
+        ADDRESS:
+        <a href="https://etherscan.io/address/{{ response.nftAddress }}">{{
+          response.nftAddress
+        }}</a>
       </li>
     </ul>
   </div>
