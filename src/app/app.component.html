@@ -5,16 +5,20 @@
   >
 </h1>
 <div *ngIf="loading">
-  <strong>Currently Loading...</strong>
+  <strong>Currently Loading...</strong><br>
+  <strong>Querying "https://api.thegraph.com/subgraphs/name/decentraland/marketplace"...</strong>
 </div>
 <div *ngIf="!loading">
+  <h2>Counts Properties</h2>
   <ul *ngFor="let response of graphResponse.counts">
-    <li>orderEstate: {{ response.orderEstate }}</li>
-    <li>orderParcel: {{ response.orderParcel }}</li>
+    <li>OrderEstate: {{ response.orderEstate }}</li>
+    <li>OrderParcel: {{ response.orderParcel }}</li>
   </ul>
+  <h2>Orders Properties</h2>
   <ul *ngFor="let response of graphResponse.orders">
-    <li>orderEstate: {{ response.id }}</li>
-    <li>orderParcel: {{ response.category }}</li>
+    <li>Category: {{ response.category }}</li>
+    <li>ID: {{ response.id }}</li>
+    <li>NFT: {{ response.nftAddress }}</li>
   </ul>
 </div>
 <router-outlet></router-outlet>

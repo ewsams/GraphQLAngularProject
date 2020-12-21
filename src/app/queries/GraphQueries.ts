@@ -1,7 +1,7 @@
+import { gql } from "apollo-angular-boost";
 /* This file consist of variables
 for constructing Queries
 */
-import { gql } from "apollo-angular-boost";
 
 export const sampleQuery =  gql`
 {
