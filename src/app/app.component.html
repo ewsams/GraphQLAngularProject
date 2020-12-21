@@ -1,31 +1,44 @@
-<h1>
+<h1 class="boldSales pageTitle left50px">
   Using:
   <a href="https://www.npmjs.com/package/apollo-angular-boost">
     Apollo-Angular-Boost</a
   >
 </h1>
-<h4>please donate help us build a better experience :</h4>
+<h3 class="boldSales pageTitle left50px">
+  please donate help us build a better experience :
+</h3>
 <h2>
-  <b> 0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86 </b>
+  <b class="walletAddress">
+    0x4861A10aD69A7a6cA29384b21cA9b0F4D875af86
+  </b>
 </h2>
 <div *ngIf="loading">
-  <strong>Currently Loading...</strong><br />
-  <strong
+  <strong class="boldSales pageTitle left50px">Currently Loading...</strong
+  ><br />
+  <strong class="boldSales pageTitle left50px"
     >Querying:
     https://api.thegraph.com/subgraphs/name/decentraland/marketplace...</strong
   >
 </div>
 <div *ngIf="!loading">
-  <h2>Counts Properties</h2>
-  <ul *ngFor="let response of graphResponse.counts">
-    <li>OrderEstate: {{ response.orderEstate }}</li>
-    <li>OrderParcel: {{ response.orderParcel }}</li>
+  <h2 class="boldSales pageTitle left50px">Counts Properties</h2>
+  <ul
+    *ngFor="let response of graphResponse.counts"
+    class="list-group boldSales left50px"
+  >
+    <li class="left50px">OrderEstate: {{ response.orderEstate }}</li>
+    <li class="left50px">OrderParcel: {{ response.orderParcel }}</li>
   </ul>
-  <h2>Orders Properties</h2>
-  <ul *ngFor="let response of graphResponse.orders" class="list-group">
-    <li class="list-group-item active">Category: {{ response.category }}</li>
+  <h2 class="boldSales pageTitle left50px">Orders Properties</h2>
+  <ul
+    *ngFor="let response of graphResponse.orders"
+    class="list-group boldSales left10px"
+  >
+    <li class="list-group-item active">
+      Type of SALE: {{ response.category }}
+    </li>
     <li class="list-group-item">ID: {{ response.id }}</li>
-    <li class="list-group-item">NFT: {{ response.nftAddress }}</li>
+    <li class="list-group-item">ADDRESS: {{ response.nftAddress }}</li>
   </ul>
 </div>
 <router-outlet></router-outlet>
