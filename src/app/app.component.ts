@@ -14,11 +14,12 @@ export class AppComponent {
   move this stuff to the services file. */
 
   graphResponse: {};
+  loading: boolean = true;
 
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
-      this.apollo
+    this.apollo
       .watchQuery({
         query: sampleQuery,
       })
@@ -28,7 +29,8 @@ export class AppComponent {
           orders: result.data.orders,
         };
         console.log(responseObject);
-       this.graphResponse = responseObject;
+        this.graphResponse = responseObject;
+        this.loading = false;
       });
   }
 }

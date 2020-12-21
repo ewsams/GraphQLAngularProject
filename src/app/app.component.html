@@ -4,12 +4,17 @@
     Apollo-Angular-Boost</a
   >
 </h1>
-<ul *ngFor="let response of graphResponse.counts">
-  <li>orderEstate: {{ response.orderEstate }}</li>
-  <li>orderParcel: {{ response.orderParcel }}</li>
-</ul>
-<ul *ngFor="let response of graphResponse.orders">
-  <li>orderEstate: {{ response.id }}</li>
-  <li>orderParcel: {{ response.category }}</li>
-</ul>
+<div *ngIf="loading">
+  <strong>Currently Loading...</strong>
+</div>
+<div *ngIf="!loading">
+  <ul *ngFor="let response of graphResponse.counts">
+    <li>orderEstate: {{ response.orderEstate }}</li>
+    <li>orderParcel: {{ response.orderParcel }}</li>
+  </ul>
+  <ul *ngFor="let response of graphResponse.orders">
+    <li>orderEstate: {{ response.id }}</li>
+    <li>orderParcel: {{ response.category }}</li>
+  </ul>
+</div>
 <router-outlet></router-outlet>
