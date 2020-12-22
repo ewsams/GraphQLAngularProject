@@ -12,7 +12,7 @@ export class AppComponent {
   move this stuff to the services file. */
 
   // building our App on Objects
-  graphResponse = {};
+  graphResponse:any = {};
   loading: boolean = true;
 
   constructor(private apollo: Apollo) {}

@@ -8,9 +8,10 @@ import { AppComponent } from "./app.component";
 
 //App Services
 import { GraphService } from "./services/graph-service.service";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     AppRoutingModule,
     ApolloBoostModule,

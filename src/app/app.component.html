@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <!-- Using the cointainer Class -->
 <div class="container-fluid">
   <h1 class="boldSales pageTitle">
@@ -37,21 +38,20 @@
       </li>
     </ul>
     <h2 class="boldSales pageTitle">Orders Properties</h2>
-    <ul
+    <div
       *ngFor="let response of graphResponse.orders"
-      class="list-group boldSales"
+      class="boldSales card"
+      style="width: 36rem"
     >
-      <li class="list-group-item active">
-        Type of SALE: {{ response.category }}
-      </li>
-      <li class="list-group-item">ID: {{ response.id }}</li>
-      <li class="list-group-item">
+      <span class="card-header">Type of SALE: {{ response.category }}</span>
+      <span class="card-body">ID: {{ response.id }}</span>
+      <span class="card-body">
         ADDRESS:
         <a href="https://etherscan.io/address/{{ response.nftAddress }}">{{
           response.nftAddress
         }}</a>
-      </li>
-    </ul>
+      </span>
+    </div>
   </div>
 </div>
 <router-outlet></router-outlet>

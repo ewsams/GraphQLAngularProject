@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.2.8",
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "apollo": "^2.32.0",
     "apollo-angular-boost": "^1.9.0",
     "apollo-boost": "^0.4.9",
