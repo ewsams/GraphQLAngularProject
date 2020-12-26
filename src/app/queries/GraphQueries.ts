@@ -3,7 +3,7 @@ import { gql } from "apollo-angular-boost";
 for constructing Queries
 */
 
-export const sampleQuery = gql`
+export const SAMPLEQUERY = gql`
   {
     counts(first: 5) {
       id
@@ -18,6 +18,24 @@ export const sampleQuery = gql`
         id
       }
       nftAddress
+    }
+  }
+`;
+
+export const LANDQUERY = gql`
+  {
+    parcels {
+      owner {
+        id
+        address
+        mana
+      }
+      nft {
+        tokenURI
+        name
+        image
+        createdAt
+      }
     }
   }
 `;
